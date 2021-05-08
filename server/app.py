@@ -3,7 +3,10 @@ from datetime import datetime
 import requests
 from pymongo import MongoClient
 import json
+from flask_cors import CORS
+
 app = Flask(__name__)
+CORS(app)
 
 host = "127.0.0.1"
 port= 5000
