@@ -42,7 +42,7 @@ def shorten():
     res = map_col.insert_one(mapping)
 
     
-    return str(host)+(":")+str(port)+"/r/"+str(key)
+    return "https://peepee-url.herokuapp.com/"+"/r/"+str(key)
 
 @app.route('/r/<key>')
 def red(key):
