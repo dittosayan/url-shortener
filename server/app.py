@@ -9,7 +9,7 @@ import os
 app = Flask(__name__)
 CORS(app)
 
-host = "0.0.0.0"
+host = "127.0.0.1"
 port= os.getenv("PORT", 5000)
 
 conn = MongoClient('mongodb+srv://ghosty:ghosty@cluster0.cuaqq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
@@ -42,7 +42,7 @@ def shorten():
     res = map_col.insert_one(mapping)
 
     
-    return "https://peepee-url.herokuapp.com/"+"/r/"+str(key)
+    return "https://peepee-url.herokuapp.com"+"/r/"+str(key)
 
 @app.route('/r/<key>')
 def red(key):
