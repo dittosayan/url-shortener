@@ -10,9 +10,10 @@ app = Flask(__name__)
 CORS(app)
 
 host = "0.0.0.0"
-port= os.getenv("PORT", 5000)
+port = os.getenv("PORT", 5000)
 
-conn = MongoClient('mongodb+srv://ghosty:ghosty@cluster0.cuaqq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+connection_s = os.getenv("mongo_con")
+conn = MongoClient(connection_s)
 db = conn["url-shortner"]
 key_col = db["keys"]
 map_col = db["maps"]

@@ -30,10 +30,10 @@ const InputForm = () => {
             </input>
             
             <input type="submit" className="url-submit-button" onClick={()=>{
-                axios.post("https://peepee-url.herokuapp.com//",{"url":url})
+                axios.post("https://peepee-url.herokuapp.com/",{"url":url})
                 .then( (response) => {
                     var shortenedUrl=response.data;
-                    setShort("http://"+shortenedUrl);
+                    setShort(shortenedUrl);
                     console.log(response.data);
                 })
             }}>
